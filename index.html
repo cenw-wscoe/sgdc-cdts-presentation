@@ -50,6 +50,10 @@
 					<section>
 						<h3>What is the CDTS?</h3>
 						<p>Is a JavaScript templating solution hosted on a Content Delivery Network (CDN) that use Google Closure Templates (GCT).</p>
+						<pre><code>
+&lt;script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/soyutils.js"&gt;&lt;/script&gt;
+&lt;script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/wet-en.js"&gt;&lt;/script&gt;
+						</code></pre>
 					</section>
 					<section>
 						<h3>Why was the CDTS created?</h3>
@@ -77,18 +81,49 @@
 					</section>
 				</section>
 
-				<section>
-					<section>
-						<h2>Canada.ca / GCWeb Template</h2>
-						<img src="./img/gcweb.png" alt="">
+				<section id="gcweb">
+					<h2>Canada.ca / GCWeb Template</h2>
+					<section class="hbox">
+						<h3 class="invisible">GCWeb visual look at template</h3>
+						<div class="flex-container">
+							<div class="col">
+								<img class="gcweb" src="./img/gcweb.png" alt="screen shot of Canada.ca page. See notes for description">
+							</div>
+							<div class="col">
+								<p>List of sections of the page controlled by the Javascript: </p>
+								<ul>
+									<li class="fragment fade-up">refTop</li>
+									<li class="fragment fade-up">top</li>
+									<li class="fragment fade-up">preFooter</li>
+									<li class="fragment fade-up">footer</li>
+									<li class="fragment fade-up">refFooter</li>
+								</ul>
+							</div>
+						</div>
+						<aside class="notes">
+							<h4>Notes</h4>
+							<p>On the screen now is a screen shot of a basic Canada.ca page using the CDTS.</p>
+							<dl>
+								<dt>refTop</dt>
+								<dd>Controls the information in the <code>head</code> element, like the <b>stylesheets</b> and the Adobe Analytics code.</dd>
+								<dt>top</dt>
+								<dd>Controls the main main, search language toggle and the breadcrumbs</dd>
+								<dt>preFooter</dt>
+								<dd>Controls the Date modified, Feedback and Share buttons</dd>
+								<dt>footer</dt>
+								<dd>Controls the Contact us link if you want to use a different link than what's on Canada.ca</dd>
+								<dt>refFooter</dt>
+								<dd>Controls the code after the <code>footer</code> element. Also used to define an exit script. Will demo that later in this presentation.</dd>
+							</dl>
+						</aside>
 					</section>
 					<section>
-						<h2>refTop</h2>
-						<p>Is used to control the components in the <code>head</code> element.</p>
+						<h3>refTop</h3>
+						<p>Used to control the components in the <code>head</code> element.</p>
 							<pre><code data-trim data-noescape>&lt;script&gt;
 	document.write(wet.builder.refTop({
 		"cdnEnv": "prod",
-		"$jqueryEnv" : "external",
+		"jqueryEnv" : "external",
 		"webAnalytics" : [{
 			"environment" : "production",
 			"version" : 2
@@ -96,10 +131,23 @@
 		"isApplication" : true
 	}));
 &lt;/script&gt;</code></pre>
+						<aside class="notes">
+							<h4>Notes</h4>
+							<dl>
+								<dt>cdnEnv</dt>
+								<dd>Used to define which server the site is pulling the supporting files (img, js, fonts). CDTS uses absolute paths in the JS code. This variable comes up in other sections</dd>
+								<dt>jqueryEnv</dt>
+								<dd>Used to define if the jQuery is local to the source code or using the googleapis CDN.</dd>
+								<dt>webAnalytics</dt>
+								<dd>This object array is used to define the values that call the Adobe Analytics code.</dd>
+								<dt>isApplication</dt>
+								<dd>Used for application template. More information to come later in this presentation</dd>
+							</dl>
+						</aside>
 					</section>
 					<section>
-						<h2>top</h2>
-						<p>Is used to control the components in the header and before the <code>main</code></p>
+						<h3>top</h3>
+						<p>Used to control the components in the header and before the <code>main</code></p>
 						<pre><code data-trim data-noescape>&lt;script&gt;
 	var defTop = document.getElementById("def-top");
 	defTop.outerHTML = wet.builder.top({
@@ -108,40 +156,115 @@
 			"lang" : "fr",
 			"href" : "content-fr.shtml",
 			"text" : "Français"
-		}]
+		}],
+		"breadcrumbs": [{
+			"title": "Home",
+			"href": "https://www.canada.ca/en/index.html"
+		},{
+			"title": "CDTS",
+			"acronym": "Centrally Deployed Templates Solution",
+			"href": "https://www.canada.ca/en/index.html"
+		}],
+		"showPreContent": true
 	});
 &lt;/script&gt;</code></pre>
+						<aside class="notes">
+							<h4>Notes</h4>
+							<dl>
+								<dt>lngLinks</dt>
+								<dd>Used to define language toggle link. Array includes <code>lang</code>, <code>href</code> and text node values to use.</dd>
+								<dt>breadcrumbs</dt>
+								<dd>Used to define the breadcrumb links and text. Can also be used to define an acronym if it's used as a breadcrumb text.</dd>
+								<dt>showPreContent</dt>
+								<dd>preContent is reserved for content that the powers that be want to put in every site that uses the CDTS. This could be a national security message or to tell everyone how awesome Shawn Thompson is.</dd>
+							</dl>
+						</aside>
 					</section>
 				<section>
-					<h2>preFooter</h2>
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum consequatur atque maiores doloribus qui harum sit, quos excepturi, hic veritatis sunt. Neque quam eos numquam quo quibusdam error ducimus modi.</p>
+					<h3>preFooter</h3>
+					<p>Used to control the template content right above the footer.</p>
 					<pre><code data-trim data-noescape>&lt;script&gt;
 	var defPreFooter = document.getElementById("def-preFooter");
 	defPreFooter.outerHTML = wet.builder.preFooter({
 		"cdnEnv": "prod",
-		"dateModified": "2019-07-31"
+		"dateModified": "2019-07-31",
+		"showShare": [
+			"email",
+			"facebook",
+			"linkedin",
+			"twitter"
+		],
+		"showFeedback": "https://www.domain.gc.ca"
 	});
 &lt;/script&gt;</code></pre>
+							<aside class="notes">
+								<h3>Notes</h3>
+								<dl>
+									<dt>showPostContent</dt>
+									<dd>Used by the Principal Publisher to insert content into the post content space of your page. By default this is ALWAYS shown on all pages.</dd>
+									<dt>showShare</dt>
+									<dd>Used to specify the share button of your page. Can either be false or use an array oject to define which share options you want to add.</dd>
+									<dt>showFeedback</dt>
+									<dd>Used to specify the “Report a problem on this page” button of your page. By default this button is shown with the default Canada.ca URL. You can customize the URL or simply hide the button.</dd>
+									<dt>dateModified</dt>
+									<dd>Used to specify the date modified of your page. Could also use <em>screenIdentifier</em> or <em>versionIdentifier</em></dd>
+									<dt>pagedetails</dt>
+									<dd>Used to remove the <code>&lt;div class="pagedetails"&gt;</code> when using the server message page template.</dd>
+								</dl>
+							</aside>
 						</section>
 						<section>
-							<h2>footer</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fuga est, inventore nostrum nulla quaerat quo quidem fugiat, aspernatur corporis voluptas aut ullam voluptates beatae, illo saepe recusandae mollitia porro.</p>
+							<h3>footer</h3>
+							<p>Used to control the template content in the <code>footer</code>.</p>
 							<pre><code data-trim data-noescape>&lt;script&gt;
 	var defFooter = document.getElementById("def-footer");
 	defFooter.outerHTML = wet.builder.footer({
-		"cdnEnv": "prod"
+		"cdnEnv": "prod",
+		"contactLinks": "https://www.department.gc.ca/en/contact.html"
 	});
 &lt;/script&gt;</code></pre>
+							<aside class="notes">
+								<h3>Notes</h3>
+								<dl>
+									<dt>contactLinks</dt>
+									<dd>Used to customize the contact us link located in the footer of the page.</dd>
+								</dl>
+							</aside>
 						</section>
 						<section>
-							<h2>refFooter</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad enim ipsam minima esse voluptate alias porro! Obcaecati, at a veritatis voluptatum laudantium, cupiditate natus voluptatem porro ullam accusantium nostrum.</p>
+							<h3>refFooter</h3>
+							<p>Used to control the template content that are placed after the footer like scripts and elements hidden to the user.</p>
 							<pre><code data-trim data-noescape>&lt;script&gt;
 	document.write(wet.builder.refFooter({
 		"cdnEnv": "prod",
-		"webAnalytics" : true
+		"webAnalytics" : true,
+		"exitScript": true,
+		"exitURL": "https://wwww.domain.gc.ca/out.html",
+		"exitMsg": "You are about to leave a secure site, do you wish to continue?",
+		"exitDomains": "https://wwwwdomain.gc.ca",
+		"displayModal": false,
+		"jqueryEnv": external
 	}));
 &lt;/script&gt;</code></pre>
+							<aside class="notes">
+								<h3>Notes</h3>
+								<dl>
+									<dt>webAnalytics</dt>
+									<dd>Used to inject the Adobe Analytics code at the end of the page</dd>
+									<dt>exitScript</dt>
+									<dd>Used if you want to warn the users they are leaving a secured session.</dd>
+									<dt>exitURL</dt>
+									<dd>Specify the URL where the users will be redirected to leave their secured session.</dd>
+									<dt>exitMsg</dt>
+									<dd>Specify the message the users will get before being redirected and leaving their secured</dd>
+									<dt>exitDomains</dt>
+									<dd>Specify the additional domains that should not be checked for secure exit.</dd>
+									<dt>displayModal</dt>
+									<dd>Use this variable if you want to skip the modal dialog to confirm the exit notice. Keep in mind this will not display the exit notice to the user.</dd>
+									<dt>jqueryEnv</dt>
+									<dt>Used to specify which environment you want to pull the jQuery files from. By default they are loaded locally from the WET build. Otherwise use the following to load from Google CDN</dt>
+								</dl>
+							</aside>
 						</section>
 					</section>
 	
