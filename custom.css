@@ -1,9 +1,12 @@
 /* Custom Styles */
 
 .reveal header h1 {
-    font-size: 75%;
-    text-align: center;
-    padding-top: 2em;
+    font-size: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0 0 10px;
 }
 
 .reveal h2, .reveal h3, .reveal h4 {
@@ -25,4 +28,12 @@ body {
 
 .reveal img {
     width: 60%;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.col{
+    flex: 1;
 }
