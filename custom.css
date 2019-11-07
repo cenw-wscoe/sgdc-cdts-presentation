@@ -12,7 +12,6 @@
 
 body {
     background-color: #38414d;
-    font-family: Lato,sans-serif;
 }
 
 .reveal .invisible {
@@ -22,4 +21,8 @@ body {
 	overflow: hidden;
 	position: absolute;
 	width: 1px;
+}
+
+.reveal img {
+    width: 60%;
 }
