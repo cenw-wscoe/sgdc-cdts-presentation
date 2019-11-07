@@ -78,16 +78,72 @@
 				</section>
 
 				<section>
-					<h2>Canada.ca / GCWeb Template</h2>
-					<ul>
-						<li class="fragment fade-in-then-semi-out">Different sections of the template</li>
-						<li class="fragment fade-in-then-semi-out">Different variables in each section</li>
-						<li class="fragment fade-in-then-semi-out">Different conditions</li>
-					</ul>
 					<section>
-						<h3></h3>
+						<h2>Canada.ca / GCWeb Template</h2>
+						<img src="./img/gcweb.png" alt="">
 					</section>
-				</section>
+					<section>
+						<h2>refTop</h2>
+						<p>Is used to control the components in the <code>head</code> element.</p>
+							<pre><code data-trim data-noescape>&lt;script&gt;
+	document.write(wet.builder.refTop({
+		"cdnEnv": "prod",
+		"$jqueryEnv" : "external",
+		"webAnalytics" : [{
+			"environment" : "production",
+			"version" : 2
+		}],
+		"isApplication" : true
+	}));
+&lt;/script&gt;</code></pre>
+					</section>
+					<section>
+						<h2>top</h2>
+						<p>Is used to control the components in the header and before the <code>main</code></p>
+						<pre><code data-trim data-noescape>&lt;script&gt;
+	var defTop = document.getElementById("def-top");
+	defTop.outerHTML = wet.builder.top({
+		"cdnEnv" : "prod",
+		"lngLinks" : [{
+			"lang" : "fr",
+			"href" : "content-fr.shtml",
+			"text" : "Français"
+		}]
+	});
+&lt;/script&gt;</code></pre>
+					</section>
+				<section>
+					<h2>preFooter</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum consequatur atque maiores doloribus qui harum sit, quos excepturi, hic veritatis sunt. Neque quam eos numquam quo quibusdam error ducimus modi.</p>
+					<pre><code data-trim data-noescape>&lt;script&gt;
+	var defPreFooter = document.getElementById("def-preFooter");
+	defPreFooter.outerHTML = wet.builder.preFooter({
+		"cdnEnv": "prod",
+		"dateModified": "2019-07-31"
+	});
+&lt;/script&gt;</code></pre>
+						</section>
+						<section>
+							<h2>footer</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fuga est, inventore nostrum nulla quaerat quo quidem fugiat, aspernatur corporis voluptas aut ullam voluptates beatae, illo saepe recusandae mollitia porro.</p>
+							<pre><code data-trim data-noescape>&lt;script&gt;
+	var defFooter = document.getElementById("def-footer");
+	defFooter.outerHTML = wet.builder.footer({
+		"cdnEnv": "prod"
+	});
+&lt;/script&gt;</code></pre>
+						</section>
+						<section>
+							<h2>refFooter</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad enim ipsam minima esse voluptate alias porro! Obcaecati, at a veritatis voluptatum laudantium, cupiditate natus voluptatem porro ullam accusantium nostrum.</p>
+							<pre><code data-trim data-noescape>&lt;script&gt;
+	document.write(wet.builder.refFooter({
+		"cdnEnv": "prod",
+		"webAnalytics" : true
+	}));
+&lt;/script&gt;</code></pre>
+						</section>
+					</section>
 	
 
 				<section>
