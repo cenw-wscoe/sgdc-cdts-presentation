@@ -1,21 +1,13 @@
 /* Custom Styles */
 
-.reveal header h1 {
-    font-size: 60%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 0 0 10px;
+body {
+    background-color: #38414d;
+    text-shadow: black -3px 3px 3px;
 }
 
 .reveal h2, .reveal h3, .reveal h4 {
     text-transform: initial;
-}
-
-body {
-    background-color: #38414d;
-    font-family: Lato,sans-serif;
+    text-shadow: black -3px 3px 3px;
 }
 
 .reveal .invisible {
@@ -27,9 +19,15 @@ body {
 	width: 1px;
 }
 
+.reveal #gcweb img.gcweb {
+    /* width: 100%; */
+    margin-top: 25px;
+}
+
 .flex-container{
     display: flex;
 }
+
 .col{
     flex: 1;
 }
