@@ -19,9 +19,8 @@ body {
 	width: 1px;
 }
 
-.reveal #gcweb img.gcweb {
-    /* width: 100%; */
-    margin-top: 25px;
+.reveal #gcweb .flex-container {
+    margin-top: 35px;
 }
 
 .flex-container{
