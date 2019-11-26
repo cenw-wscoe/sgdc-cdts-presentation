@@ -79,7 +79,50 @@
 						</ul>
 					</section>
 				</section>
-
+				<section>
+					<h2>CDTS and WET</h2>
+					<section>
+						<h3>WET releases</h3>
+						<p>When WET releases and makes changes to the framework, CDTS updates all the supporting files (JS, font, CSS, etc...) on our server so you don't have to.</p>
+						<ul class="unstyled fragment fade-up">
+							<li>./assets/..</li>
+							<li>./css/..</li>
+							<li>./js/..</li>
+							<li>./fonts/..</li>
+						</ul>
+					</section>
+					<section>
+						<h3>WET version 4.0.31 Language toggle link</h3>
+<pre><code data-trim data-noescape>&lt;ul class="list-inline margin-bottom-none"&gt;
+	&lt;li&gt;
+		&lt;a href="content-fr.shtml" lang="fr"&gt;Français&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+						<aside class="notes">
+							<p>When WET makes a change to the HTML markup in the code template of the page we change out code and your page automatically gets updated.</p>
+							<p>This is the HTML for the language link at the top right of the Canada.ca theme in WET version 4.0.31</p>
+						</aside>
+					</section>
+					<section>
+						<h3>WET version 4.0.32 Language toggle link</h3>
+<pre><code data-trim data-noescape>&lt;ul class="list-inline margin-bottom-none"&gt;
+	&lt;li&gt;
+		&lt;a hreflang="fr" href="content-fr.shtml" lang="fr"&gt;Français&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+						<aside class="notes">
+							<p>In the latest version of WET, they've added a <code>hreflang</code> attribute to the language link.</p>
+							<p>If you used the CDTS, you would only have to update the path to that calls the CDTS JavaScript file.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>CDTS Release Cycle</h3>
+						<p>We usually release two weeks after WET release.</p>
+						<aside class="notes">
+							<p>We are trying to change the release cycles into smaller changes more often</p>
+						</aside>
+					</section>
+				</section>
 				<section id="gcweb">
 					<h2>Canada.ca / GCWeb Template</h2>
 					<section>
