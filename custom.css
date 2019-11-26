@@ -44,3 +44,12 @@ body {
 .col{
     flex: 1;
 }
+
+.reveal .contact ul li {
+    margin-bottom: 20px;
+}
+
+.reveal .contact li.bitly {
+    font-size: 150%;
+    color: yellow
+}
