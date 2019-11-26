@@ -46,10 +46,11 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Introduction to CDTS</h2>
+					<h2>Introduction to the CDTS</h2>
 					<section>
 						<h3>What is the CDTS?</h3>
-						<p>Is a JavaScript templating solution hosted on a Content Delivery Network (CDN) that use Google Closure Templates (GCT).</p>
+						<p>CDTS stands for <span style="color:hotpink">Centrally Deployed Templates Solution</span>.</p>
+						<p>A JavaScript templating solution hosted on a Content Delivery Network (CDN) that uses Google Closure Templates (GCT).</p>
 						<pre><code>
 &lt;script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/soyutils.js"&gt;&lt;/script&gt;
 &lt;script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/wet-en.js"&gt;&lt;/script&gt;
@@ -58,23 +59,23 @@
 					<section>
 						<h3>Why was the CDTS created?</h3>
 						<ul>
-							<li>Keep pace with the frequency of Canada.ca updates;
+							<li>To keep pace with the frequency of Canada.ca updates.
 								<ul>
-									<li class="fragment fade-up">Aligned to Government of Canada (GoC) Web Renewal Initiative</li>
-									<li class="fragment fade-up">Aligned to Canada.ca Look and Feel (Information Architecture standard)</li>
-									<li class="fragment fade-up">Includes “versioning” process for Web Experience Toolkit (WET) updates</li>
+									<li class="fragment fade-up">Aligned to Government of Canada (GoC) Web Renewal Initiative.</li>
+									<li class="fragment fade-up">Aligned to Canada.ca <strong style="color:orange">look and feel</strong> (Information Architecture standard).</li>
+									<li class="fragment fade-up">Includes <span style="color:orange">versioning</span> process for Web Experience Toolkit (WET) updates.</li>
 								</ul>
 							</li>
 						</ul>
 					</section>
 					<section>
-						<h3>Who uses the CDTS now?</h3>
+						<h3>Who uses the CDTS?</h3>
 						<ul>
-							<li class="fragment fade-up">Approximatly XXXXX ESDC application external and internal.</li>
-							<li class="fragment fade-up">Various GoC departments (ISED,TBS, CIHR).</li>
+							<li class="fragment fade-up">The majority of ESDC web applications both internal and external.</li>
+							<li class="fragment fade-up">Various GoC departments (ISED, TBS, CIHR).</li>
 							<li class="fragment fade-up">Me!</li>
 							<ul>
-								<li class="fragment fade-left">Markups and WET samples.</li>
+								<li class="fragment fade-left">Prototypes and WET examples.</li>
 							</ul>
 						</ul>
 					</section>
@@ -83,16 +84,16 @@
 					<h2>CDTS and WET</h2>
 					<section>
 						<h3>WET releases</h3>
-						<p>When WET releases and makes changes to the framework, CDTS updates all the supporting files (JS, font, CSS, etc...) on our server so you don't have to.</p>
+						<p>When WET releases and makes changes to the framework, the CDTS updates all the supporting files on our server so you don't have to.</p>
 						<ul class="unstyled fragment fade-up">
-							<li>./assets/..</li>
-							<li>./css/..</li>
 							<li>./js/..</li>
+							<li>./css/..</li>
 							<li>./fonts/..</li>
+							<li>./assets/..</li>
 						</ul>
 					</section>
 					<section>
-						<h3>WET version 4.0.31 Language toggle link</h3>
+						<h3>WET version 4.0.31 &ndash; Language toggle link</h3>
 <pre><code data-trim data-noescape>&lt;ul class="list-inline margin-bottom-none"&gt;
 	&lt;li&gt;
 		&lt;a href="content-fr.shtml" lang="fr"&gt;Français&lt;/a&gt;
@@ -104,10 +105,10 @@
 						</aside>
 					</section>
 					<section>
-						<h3>WET version 4.0.32 Language toggle link</h3>
+						<h3>WET version 4.0.32 &ndash; Language toggle link</h3>
 <pre><code data-trim data-noescape>&lt;ul class="list-inline margin-bottom-none"&gt;
 	&lt;li&gt;
-		&lt;a hreflang="fr" href="content-fr.shtml" lang="fr"&gt;Français&lt;/a&gt;
+		&lt;a <strong>hreflang="fr"</strong> href="content-fr.shtml" lang="fr"&gt;Français&lt;/a&gt;
 	&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 						<aside class="notes">
@@ -116,15 +117,15 @@
 						</aside>
 					</section>
 					<section>
-						<h3>CDTS Release Cycle</h3>
-						<p>We usually release two weeks after WET release.</p>
+						<h3>CDTS release cycle</h3>
+						<p>We usually release two weeks after a WET release.</p>
 						<aside class="notes">
 							<p>We are trying to change the release cycles into smaller changes more often</p>
 						</aside>
 					</section>
 				</section>
 				<section id="gcweb">
-					<h2>Canada.ca / GCWeb Template</h2>
+					<h2>Canada.ca / GCWeb template</h2>
 					<section>
 						<h3 class="invisible">GCWeb visual look at the top part of the template</h3>
 						<div class="flex-container">
@@ -132,7 +133,7 @@
 								<img class="gcweb" src="./img/gcweb-top.png" alt="screen shot of Canada.ca page. See notes for description">
 							</div>
 							<div class="col">
-								<p>Components from the top of the page controlled by CDTS: </p>
+								<p>Components from the top of the page controlled by the CDTS: </p>
 								<ul>
 									<li class="fragment fade-up">FIP</li>
 									<li class="fragment fade-up">Search</li>
@@ -150,10 +151,10 @@
 								<img class="gcweb" src="./img/gcweb-bottom.png" alt="screen shot of Canada.ca page. See notes for description">
 							</div>
 							<div class="col">
-								<p>Components from the bottom of the page controlled by CDTS: </p>
+								<p>Components from the bottom of the page controlled by the CDTS: </p>
 								<ul>
 									<li class="fragment fade-up">Report a problem on this page</li>
-									<li class="fragment fade-up">Share</li>
+									<li class="fragment fade-up">Share this page</li>
 									<li class="fragment fade-up">Date modified</li>
 									<li class="fragment fade-up">Footer</li>
 									<li class="fragment fade-up">About this site list</li>
@@ -167,8 +168,8 @@
 							<div class="col">
 								<img class="gcweb" src="./img/gcweb.png" alt="screen shot of Canada.ca page. See notes for description">
 							</div>
-							<div class="col fragment fade-up">
-								<p>Sections of the source code controlled by the Javascript: </p>
+							<div class="col">
+								<p>Sections of the source code controlled by the CDTS JavaScript:</p>
 								<ul>
 									<li class="fragment fade-up">refTop</li>
 									<li class="fragment fade-up">top</li>
@@ -225,7 +226,7 @@
 					</section>
 					<section>
 						<h3>top</h3>
-						<p>Used to control the components in the header and before the <code>main</code></p>
+						<p>Used to control the components in the header and before the <code>main</code>.</p>
 						<pre><code data-trim data-noescape>&lt;script&gt;
 	var defTop = document.getElementById("def-top");
 	defTop.outerHTML = wet.builder.top({
@@ -260,7 +261,7 @@
 					</section>
 					<section>
 						<h3>preFooter</h3>
-						<p>Used to control the template content right above the footer.</p>
+						<p>Used to control the template content right above the <code>footer</code>.</p>
 						<pre><code data-trim data-noescape>&lt;script&gt;
 	var defPreFooter = document.getElementById("def-preFooter");
 	defPreFooter.outerHTML = wet.builder.preFooter({
@@ -311,7 +312,7 @@
 						</section>
 						<section>
 							<h3>refFooter</h3>
-							<p>Used to control the template content that are placed after the footer like scripts and elements hidden to the user.</p>
+							<p>Used to control the template content that is placed after the footer, such as scripts and elements hidden from the user.</p>
 							<pre><code data-trim data-noescape>&lt;script&gt;
 	document.write(wet.builder.refFooter({
 		"cdnEnv": "prod",
@@ -420,7 +421,7 @@
 							</aside>
 						</section>
 						<section>
-							<h3>Intranet Custom Themes</h3>
+							<h3>Intranet custom themes</h3>
 							<ul class="unstyled">
 								<li class="fragment fade-in"><img src="./img/gcintra-subtheme-esdc-top.png" alt=""></li>
 								<li class="fragment fade-in"><img src="./img/gcintra-subtheme-eccc-top.png" alt=""></li>
@@ -434,7 +435,7 @@ GoC TEMPLATES
 --------------------->
 
 				<section>
-					<h2>Implementation Templates</h2>
+					<h2>Implementation templates</h2>
 					<section>
 						<ul>
 							<li>DotNetTemplates</li>
@@ -458,7 +459,7 @@ GoC TEMPLATES
 						</ul>
 					</section>					
 					<section class="hbox">
-						<h3>Supported Frameworks</h3>
+						<h3>Supported frameworks</h3>
 						<div class="flex-container">
 							<div class="col">
 								<p>DotNetTemplates</p>
@@ -480,8 +481,8 @@ GoC TEMPLATES
 						<p>Built and Released with hierarchy, you can add your own sub components if we don't provide it.</p>
 					</section>					
 					<section>
-						<h3>Get Started</h3>
-							<p>Both projects are managed and supported though GCcode<p>
+						<h3>Get started</h3>
+							<p>Both projects are managed and supported through GCcode.<p>
 							<ul>
 								<li><a href="https://gccode.ssc-spc.gc.ca/iitb-dgiit/sds/GOCWebTemplates/DotNetTemplates">https://gccode.ssc-spc.gc.ca/iitb-dgiit/sds/GOCWebTemplates/<span style="color:rgb(189, 0, 189)">DotNetTemplates</span></a></li>
 								<li><a href="https://gccode.ssc-spc.gc.ca/iitb-dgiit/sds/GOCWebTemplates/JavaTemplates">https://gccode.ssc-spc.gc.ca/iitb-dgiit/sds/GOCWebTemplates/<span style="color:orange">JavaTemplates</span></a></li>
@@ -491,7 +492,7 @@ GoC TEMPLATES
 				<section>
 					<h2>Conclusion / Future</h2>
 					<section>
-						<h3>nCDTS is...</h3>
+						<h3>nCDTS is:</h3>
 						<ul>
 							<li class="fragment fade-left">Open source</li>
 							<li class="fragment fade-right">nodeJS</li>
@@ -516,7 +517,7 @@ GoC TEMPLATES
 					<section class="contact">
 						<h3>Contact us</h3>
 						<ul class="unstyled">
-							<li class="email"><a href="mailto:email@domain.com">email@doamin.com</a></li>
+							<li class="email"><a href="mailto:NC-SGDC-CDTS-GD@hrsdc-rhdcc.gc.ca">NC-SGDC-CDTS-GD@hrsdc-rhdcc.gc.ca</a></li>
 							<li class="bitly"><a href="https://bit.ly/whatiscdts">bit.ly/whatiscdts</a></li>
 						</ul>
 					</section>
