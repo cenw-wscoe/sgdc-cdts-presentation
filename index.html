@@ -56,6 +56,7 @@
 &lt;script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/wet-en.js"&gt;&lt;/script&gt;
 						</code></pre>
 						<aside class="notes">
+							<h4>Notes: What is the CDTS?</h4>
 							<p>As you can see here our javascript is hosted on Canada.ca. We deploy it to a centralized server and update the files so you don't have to.</p>
 						</aside>
 					</section>
@@ -82,6 +83,7 @@
 							</ul>
 						</ul>
 						<aside class="notes">
+							<h4>Notes: Who uses the CDTS?</h4>
 							<ul>
 								<li>All ESDC external applications are mandated to CDTS.</li>
 								<li>We would like to add more to this list.</li>
@@ -102,6 +104,7 @@
 							<li>./assets/..</li>
 						</ul>
 						<aside class="notes">
+							<h4>Notes: WET releases</h4>
 							<p>These are a list of the supported WET files we host on our servers.</p>
 						</aside>
 					</section>
@@ -113,6 +116,7 @@
 	&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 						<aside class="notes">
+							<h4>Notes: WET version 4.0.31 &ndash; Language toggle link</h4>
 							<p>When WET makes a change to the HTML markup in the code template of the page we change out code and your page automatically gets updated.</p>
 							<p>This is the HTML for the language link at the top right of the Canada.ca theme in WET version 4.0.31</p>
 						</aside>
@@ -125,6 +129,7 @@
 	&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 						<aside class="notes">
+							<h4>Notes: WET version 4.0.32 &ndash; Language toggle link</h4>
 							<p>In the latest version of WET, they've added a <code>hreflang</code> attribute to the language link.</p>
 							<p>If you used the CDTS, you would only have to update the path to that calls the CDTS JavaScript file.</p>
 						</aside>
@@ -157,6 +162,7 @@
 							</div>
 						</div>
 						<aside class="notes">
+							<h4>Notes: GCWeb visual look at the top part of the template</h4>
 							<dl>
 								<dt>FIP</dt>
 								<dd>We control the markup of the Federal Identity Program (FIP) logo. You can't change it but if the markup changes you don't have to do anything.</dd>
@@ -189,6 +195,7 @@
 							</div>
 						</div>
 						<aside class="notes">
+							<h4>Notes: GCWeb visual look at the bottom half of the template</h4>
 							<dl>
 								<dt>Report a problem on this page</dt>
 								<dd>Can be set to link to your own feedback form</dd>
@@ -221,7 +228,7 @@
 							</div>
 						</div>
 						<aside class="notes">
-							<h4>Notes</h4>
+							<h4>Notes: GCWeb different template parts</h4>
 							<p>On the screen now is a screen shot of a basic Canada.ca page using the CDTS.</p>
 							<p>Each section listed below is used to control different parts to the template.</p>
 							<dl>
@@ -253,7 +260,7 @@
 	}));
 &lt;/script&gt;</code></pre>
 						<aside class="notes">
-							<h4>Notes</h4>
+							<h4>Notes: refTop</h4>
 							<dl>
 								<dt>cdnEnv</dt>
 								<dd>Used to define which server the site is pulling the supporting files (img, js, fonts). CDTS uses absolute paths in the JS code. This variable comes up in other sections</dd>
@@ -319,7 +326,7 @@
 	});
 &lt;/script&gt;</code></pre>
 							<aside class="notes">
-								<h3>Notes</h3>
+								<h4>Notes: preFooter</h4>
 								<dl>
 									<dt>showPostContent</dt>
 									<dd>Used by the Principal Publisher to insert content into the post content space of your page. By default this is ALWAYS shown on all pages.</dd>
@@ -345,7 +352,7 @@
 	});
 &lt;/script&gt;</code></pre>
 							<aside class="notes">
-								<h3>Notes</h3>
+								<h4>Notes: footer</h4>
 								<dl>
 									<dt>contactLinks</dt>
 									<dd>Used to customize the contact us link located in the footer of the page.</dd>
@@ -368,7 +375,7 @@
 	}));
 &lt;/script&gt;</code></pre>
 							<aside class="notes">
-								<h3>Notes</h3>
+								<h4>Notes: refFooter</h4>
 								<dl>
 									<dt>webAnalytics</dt>
 									<dd>Used to inject the Adobe Analytics code at the end of the page</dd>
@@ -420,9 +427,9 @@
 								<h4>Notes: GCWeb application templates</h4>
 								<dl>
 									<dt>Application template top section</dt>
-									<dd></dd>
+									<dd>We've allowed many componants in the head to be modified. For example; the title, the search, added buttons, new look to the menu.</dd>
 									<dt>Application template bottom section</dt>
-									<dd></dd>
+									<dd>We've allowed componants in the head to be modified as well. For example, you can turn off the Report and Share buttons, you add a custom footer</dd>
 								</dl>
 							</aside>
 						</section>
@@ -433,15 +440,9 @@
 								<li class="fragment fade-in"><img src="./img/gcintranet-footer.png" alt=""></li>
 							</ul>
 							<aside class="notes">
-								<h3>Notes: GCIntranet template</h3>
-								<dl>
-									<dt></dt>
-									<dd></dd>
-									<dt></dt>
-									<dd></dd>
-									<dt></dt>
-									<dd></dd>
-								</dl>
+								<h4>Notes: GCIntranet template</h4>
+								<p>We've aslo created GCIntranet templates with it's own customizable components</p>
+								<p>You can see on the screen the top bottom parts of a GCIntranet page with a sample of the default menu, search and footer</p>
 							</aside>
 						</section>
 						<section>
@@ -451,15 +452,8 @@
 								<li class="fragment fade-in"><img src="./img/gcintra-appTop-bottom.png" alt=""></li>
 							</ul>
 							<aside class="notes">
-								<h3>Notes: GCIntranet template</h3>
-								<dl>
-									<dt></dt>
-									<dd></dd>
-									<dt></dt>
-									<dd></dd>
-									<dt></dt>
-									<dd></dd>
-								</dl>
+								<h4>Notes: GCIntranet application template</h4>
+								<p>And again we've created custom Intranet application templates. With a slightly different look.</p>
 							</aside>
 						</section>
 						<section>
@@ -469,6 +463,10 @@
 								<li class="fragment fade-in"><img src="./img/gcintra-subtheme-eccc-top.png" alt=""></li>
 								<li class="fragment fade-in"><a href="https://cenw-wscoe.github.io/sgdc-cdts/GCIntranet/index.html">More GCIntranet examples</a></li>
 							</ul>
+							<aside>
+								<h4>Notes: Intranet custom themes</h4>
+								<p>We are moving away from custom themes and making the components as flexible as possible to customize them with variables and all themes wold have to do it is add a CSS file to change the colour scheme.</p>
+							</aside>
 						</section>
 					</section>
 	
@@ -544,7 +542,8 @@ GoC TEMPLATES
 							<li class="fragment fade-right">TypeScript</li>
 						</ul>
 						<aside class="notes">
-							<p>nCDTS stands for the next CDTS and it's built on...</p>
+							<h4>Notes: nCDTS</h4>
+							<p>nCDTS stands for the next CDTS and it's built on... these following technologies.</p>
 						</aside>
 					</section>
 					<section>
