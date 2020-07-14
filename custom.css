@@ -19,9 +19,22 @@ body {
 	width: 1px;
 }
 
-.reveal #gcweb img.gcweb {
-    /* width: 100%; */
-    margin-top: 25px;
+.reveal #gcweb .flex-container {
+    margin-top: 35px;
+}
+
+.reveal .unstyled ul {
+    list-style: none;
+}
+
+.reveal .unstyled li {
+    list-style: none;
+    text-align: center;
+}
+.reveal .unstyled img {
+    width: 75%;
+    padding: 0;
+    margin: 0;
 }
 
 .flex-container{
@@ -30,4 +43,13 @@ body {
 
 .col{
     flex: 1;
+}
+
+.reveal .contact ul li {
+    margin-bottom: 20px;
+}
+
+.reveal .contact li.bitly {
+    font-size: 150%;
+    color: yellow
 }
